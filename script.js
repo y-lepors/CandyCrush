@@ -28,7 +28,7 @@ document.addEventListener("dragstart", function(event){
         dragged = event.target;
 } ,false);
 
-
+// Autorise le drop sur tout les bonbons de la class Pion
 const target = document.getElementsByClassName("pion");
                         for(let i = 0 ; i < target.length ; i++){
                                 target[i].addEventListener("dragover", (event) => {
@@ -37,7 +37,7 @@ const target = document.getElementsByClassName("pion");
                                         });
                         }
                         
-
+// Ajoute l'évenement drop pour lorsque l'image est relachée
 document.addEventListener("drop", function(event){
         event.preventDefault();
         
@@ -639,6 +639,7 @@ function displayOption(){
 
 }
 
+// Affiche la page règles
 function displayRules(){
         let body = document.getElementsByTagName("body")[0]
         body.innerHTML = ""
