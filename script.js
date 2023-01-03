@@ -57,7 +57,6 @@ document.addEventListener("drop", function(event){
                 targetParentNode.appendChild(dragged);
                 dragParentNode.appendChild(event.target);
 
-
                 // Change les couleur dans la matrice 
                 for(let i = 0 ; i < cases.length ; i++){
                         let evt = cases[i].find(objet => objet.id == event.target.id);
@@ -70,13 +69,8 @@ document.addEventListener("drop", function(event){
                         }
 
                 }
-                
-
                 threeRules();
         }
-
-        
-       
 },false);
 
 createMenu()
@@ -156,8 +150,6 @@ function createDom(){
         let plateau = document.createElement("div")
         plateau.id = "plateau"
         plateau.innerHTML = ""
-
-        
 
         for (let i =0 ;  i < cases.length ; i++){
                 let ligne = document.createElement("div")
@@ -257,9 +249,6 @@ function createDom(){
         } else {
                 threeRules()
         }
-
-
-       
 }
 
 
@@ -416,8 +405,6 @@ function correctMove(evt , drag){
         || evt.target.id == (parseInt(drag.id) + cases[0].length)
         || (evt.target.id == (parseInt(drag.id-1)) && drag.id % cases[0].length != 0)
         || evt.target.id == (parseInt(drag.id- cases[0].length)));
-                        
-
 }
 
 // Fonction créer de menu principale du jeu et l'affiche
